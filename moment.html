@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Arrive Right Here · Breathe, My Friend</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=Atkinson+Hyperlegible:wght@400;700&display=swap">
+<link rel="stylesheet" href="styles.css">
+<style>
+  .stat { display: grid; grid-template-columns: auto 1fr; gap: 20px; align-items: center; background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 20px 22px; }
+  .stat .big { font-family: var(--display); font-weight: 700; font-size: clamp(3rem, 10vw, 4.5rem); color: var(--c); line-height: 1; font-variant-numeric: tabular-nums; }
+  .stat p { min-width: 0; }
+  .senses { list-style: none; padding: 0; display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 10px; }
+  .senses li { background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 14px; text-align: center; display: flex; flex-direction: column; gap: 4px; min-width: 0; }
+  .senses strong { font-family: var(--display); font-size: 1.8rem; color: var(--c); }
+  .senses span { font-size: 0.9rem; color: var(--muted); }
+  .map { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+  .map > div { border-radius: 14px; padding: 18px; display: flex; flex-direction: column; gap: 6px; min-width: 0; }
+  .map .words { background: var(--surface); border: 1px dashed var(--line); }
+  .map .world { background: var(--soft); }
+  .map .label { font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase; font-weight: 700; color: var(--c); }
+  @media (max-width: 640px) {
+    .senses { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .map { grid-template-columns: 1fr; }
+    .stat { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body class="t-moment">
+
+<nav class="nav"><div class="nav-inner">
+  <a class="brand" href="index.html">Breathe, <span>my friend</span></a>
+  <ul class="nav-links">
+    <li class="t-body"><a href="index.html">Home</a></li>
+    <li class="t-body"><a href="body.html">1 · Body</a></li>
+    <li class="t-mind"><a href="mind.html">2 · Mind</a></li>
+    <li class="t-moment"><a href="moment.html" aria-current="page">3 · Moment</a></li>
+    <li class="t-science"><a href="science.html">The Science</a></li>
+  </ul>
+</div></nav>
+
+<main class="wrap">
+
+  <header class="page-head">
+    <span class="eyebrow">Step 3 · Moment</span>
+    <h1>Arrive right here</h1>
+    <p class="lede">The better moment you keep chasing? This is it. You're already in it.</p>
+  </header>
+
+  <section class="section">
+    <div class="oneline">
+      <span class="label">In one line</span>
+      <p>Stop waiting for life to start later. Thank this moment, just as it is, and feel what it's like to be alive in it.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-head">
+      <h2>The chase</h2>
+      <p class="prose muted">"I'll relax when this project is done." "I'll be happy after the promotion." "Once things calm down..." The mind keeps pointing at a better moment somewhere ahead. Then that moment arrives, and the mind points ahead again.</p>
+    </div>
+    <div class="stat">
+      <div class="big">47%</div>
+      <p>In a large Harvard study, people's minds were wandering away from what they were doing about <strong>half the time</strong>. And people were less happy while their minds wandered, even when they wandered somewhere pleasant. <span class="muted">(Killingsworth &amp; Gilbert, 2010)</span></p>
+    </div>
+    <p class="prose">Living in "later" isn't just a habit. It's the same alarm system from Step 1, always scanning ahead for the next problem. Coming back to now is how you tell it: <strong>right here, right now, I'm okay.</strong></p>
+  </section>
+
+  <section class="section">
+    <div class="section-head">
+      <h2>Gratitude for this one</h2>
+      <p class="prose muted">Not gratitude for a perfect moment. Gratitude for <em>this</em> one, including the tired, boring, ordinary ones.</p>
+    </div>
+    <div class="cards">
+      <div class="card"><h3>It's backed by research</h3><p>People who regularly note what they're grateful for report better mood, better sleep and more optimism, in studies going back over 20 years.</p></div>
+      <div class="card"><h3>Keep it small</h3><p>Warm coffee. Sun on your arm. A breath that felt easy. Small and real beats big and forced.</p></div>
+      <div class="card"><h3>Feel it, don't list it</h3><p>Pause for a few seconds with each one. Let the body register it. That's what makes it stick.</p></div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-head">
+      <h2>Come back through your senses</h2>
+      <p class="prose muted">Your senses only work in the present. They're the fastest door back to now.</p>
+    </div>
+    <ul class="senses" aria-label="The 5-4-3-2-1 senses exercise">
+      <li><strong>5</strong><span>things you see</span></li>
+      <li><strong>4</strong><span>things you feel</span></li>
+      <li><strong>3</strong><span>things you hear</span></li>
+      <li><strong>2</strong><span>things you smell</span></li>
+      <li><strong>1</strong><span>thing you taste</span></li>
+    </ul>
+  </section>
+
+  <section class="section">
+    <div class="section-head">
+      <h2>The world beyond words</h2>
+      <p class="prose muted">Alfred Korzybski, a philosopher of language, famously said: the map is not the territory. Words are maps. Life itself, what he called the "unspeakable" level, is the territory.</p>
+    </div>
+    <div class="map">
+      <div class="words"><span class="label">The map: words</span><p>"I'm stressed." "This is bad." "What if it gets worse?" Labels, stories and predictions about life.</p></div>
+      <div class="world"><span class="label">The territory: this moment</span><p>Breath moving. Weight in the chair. Light in the room. What's actually here before you name it.</p></div>
+    </div>
+    <p class="prose">Anxiety lives mostly in the map. The territory, the raw moment, is almost always calmer than the story about it. Steps 1 and 2 quiet the body and the mind. Step 3 is stepping off the map and into the territory.</p>
+  </section>
+
+  <section class="section">
+    <div class="section-head">
+      <h2>The buzz of being alive</h2>
+    </div>
+    <p class="prose">With practice, many people start to feel something underneath the calm: a warm, tingling, wide-open feeling of simply being alive. It can be blissful.</p>
+    <div class="pair">
+      <div class="old"><span class="label">The trap</span><p>Making the bliss the goal. "I should feel amazing right now and I don't." That's just a new better moment to chase.</p></div>
+      <div class="new"><span class="label">The way through</span><p>Accept this moment as it is, flat or bright. The aliveness tends to show up on its own when you stop demanding it.</p></div>
+    </div>
+  </section>
+
+  <a class="next t-science" href="science.html">
+    <div><div class="label">Want the why?</div><div class="title">The science, made simple</div></div>
+    <span class="arrow">→</span>
+  </a>
+
+  <footer class="foot"><p>This is coaching, not medical treatment. For panic disorder or trauma, work alongside a therapist.</p></footer>
+</main>
+</body>
+</html>

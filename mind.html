@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Watch Your Thoughts · Breathe, My Friend</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=Atkinson+Hyperlegible:wght@400;700&display=swap">
+<link rel="stylesheet" href="styles.css">
+<style>
+  .forecast { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; }
+  .forecast div { background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 16px; display: flex; flex-direction: column; gap: 4px; min-width: 0; }
+  .forecast .k { font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase; font-weight: 700; color: var(--c); }
+  .three { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; }
+  .three .card { border-top: 4px solid var(--c); }
+  .say-it { font-family: var(--display); font-size: 1.05rem; color: var(--ink); background: var(--soft); border-radius: 10px; padding: 10px 12px; }
+  .reframe { display: flex; flex-direction: column; gap: 8px; }
+  .reframe div { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 12px 16px; }
+  .reframe div:nth-child(2) { margin-left: 24px; }
+  .reframe div:nth-child(3) { margin-left: 48px; border-color: var(--c); }
+  @media (max-width: 640px) {
+    .forecast, .three { grid-template-columns: 1fr; }
+    .reframe div:nth-child(2) { margin-left: 12px; }
+    .reframe div:nth-child(3) { margin-left: 24px; }
+  }
+</style>
+</head>
+<body class="t-mind">
+
+<nav class="nav"><div class="nav-inner">
+  <a class="brand" href="index.html">Breathe, <span>my friend</span></a>
+  <ul class="nav-links">
+    <li class="t-body"><a href="index.html">Home</a></li>
+    <li class="t-body"><a href="body.html">1 · Body</a></li>
+    <li class="t-mind"><a href="mind.html" aria-current="page">2 · Mind</a></li>
+    <li class="t-moment"><a href="moment.html">3 · Moment</a></li>
+    <li class="t-science"><a href="science.html">The Science</a></li>
+  </ul>
+</div></nav>
+
+<main class="wrap">
+
+  <header class="page-head">
+    <span class="eyebrow">Step 2 · Mind</span>
+    <h1>Watch your thoughts</h1>
+    <p class="lede">You are not your thoughts. You're the one watching them.</p>
+  </header>
+
+  <section class="section">
+    <div class="oneline">
+      <span class="label">In one line</span>
+      <p>A thought is a guess your brain makes. You can watch it arrive, thank it, and let it go, without obeying it.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-head">
+      <h2>Your brain is a weather forecaster</h2>
+      <p class="prose muted">Your brain's main job is predicting what happens next, so it can get your body ready in time. Every worried thought is a forecast. Some forecasts are right. Many aren't.</p>
+    </div>
+    <div class="forecast">
+      <div><span class="k">The forecast</span><p>"This meeting is going to go badly."</p></div>
+      <div><span class="k">What the body does</span><p>Heart speeds up, stomach tightens, getting ready for trouble.</p></div>
+      <div><span class="k">What actually happens</span><p>Usually: the meeting is fine. The storm never came.</p></div>
+    </div>
+    <p class="prose">A forecaster who's been through hard years gets cautious and predicts storms a lot. That's not a broken brain. It's a brain that learned to protect you. It just needs new information: <strong>you're safe now.</strong></p>
+  </section>
+
+  <section class="section">
+    <div class="section-head">
+      <h2>The 90-second wave</h2>
+      <p class="prose muted">Neuroscientist Jill Bolte Taylor noticed that the chemical rush of a feeling tends to rise and fall in about 90 seconds. What keeps it going longer is the story we keep telling about it.</p>
+    </div>
+    <figure class="figure">
+      <svg viewBox="0 0 640 220" role="img" aria-label="Two curves. When watched, a feeling rises and falls in about 90 seconds. When fed with thoughts, it keeps rising again.">
+        <line x1="40" y1="180" x2="620" y2="180" stroke="var(--line)" stroke-width="2"/>
+        <line x1="40" y1="20" x2="40" y2="180" stroke="var(--line)" stroke-width="2"/>
+        <text x="44" y="200" font-size="12" fill="var(--muted)" font-family="Atkinson Hyperlegible, sans-serif">0 s</text>
+        <text x="215" y="200" font-size="12" fill="var(--muted)" font-family="Atkinson Hyperlegible, sans-serif">~90 s</text>
+        <text x="560" y="200" font-size="12" fill="var(--muted)" font-family="Atkinson Hyperlegible, sans-serif">later</text>
+        <text x="14" y="30" font-size="12" fill="var(--muted)" font-family="Atkinson Hyperlegible, sans-serif" transform="rotate(-90 14 30)" text-anchor="end">feeling</text>
+        <path d="M40 178 C 90 178, 110 50, 140 50 C 170 50, 190 170, 235 176 L 620 178" fill="none" stroke="var(--mind)" stroke-width="3" stroke-linecap="round"/>
+        <path d="M40 178 C 90 178, 110 60, 140 60 C 170 60, 180 110, 210 100 C 240 90, 250 45, 290 45 C 330 45, 330 110, 370 95 C 410 80, 420 40, 460 40 C 500 40, 510 100, 550 88 C 580 80, 600 60, 620 58" fill="none" stroke="var(--panic)" stroke-width="3" stroke-linecap="round" stroke-dasharray="6 6"/>
+        <rect x="380" y="140" width="12" height="4" fill="var(--mind)"/>
+        <text x="398" y="146" font-size="13" fill="var(--ink)" font-family="Atkinson Hyperlegible, sans-serif">Watched: rises, then passes</text>
+        <rect x="380" y="158" width="12" height="4" fill="var(--panic)"/>
+        <text x="398" y="164" font-size="13" fill="var(--ink)" font-family="Atkinson Hyperlegible, sans-serif">Fed with "what if...": keeps going</text>
+      </svg>
+      <figcaption>90 seconds is a rule of thumb, not a stopwatch. Some waves are shorter, some longer. The point: feelings move when we let them.</figcaption>
+    </figure>
+  </section>
+
+  <section class="section">
+    <div class="section-head">
+      <h2>Three moves</h2>
+      <p class="prose muted">Use these whenever an anxious thought shows up.</p>
+    </div>
+    <div class="three">
+      <div class="card">
+        <span class="tag">1</span>
+        <h3>Notice it</h3>
+        <p>Catch the thought as a thought. Name it.</p>
+        <p class="say-it">"There's the worry about money again."</p>
+      </div>
+      <div class="card">
+        <span class="tag">2</span>
+        <h3>Honor it</h3>
+        <p>Don't fight it. It showed up to protect you. Thank it.</p>
+        <p class="say-it">"Thanks, brain. I know you're trying to keep me safe."</p>
+      </div>
+      <div class="card">
+        <span class="tag">3</span>
+        <h3>Let it pass</h3>
+        <p>Feel it in the body. Breathe low and slow. Watch it float off.</p>
+        <p class="say-it">"I don't need to solve this right now."</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-head">
+      <h2>Try this: put some space in front of it</h2>
+      <p class="prose muted">Add a few words in front of an anxious thought and notice how it loosens its grip.</p>
+    </div>
+    <div class="reframe">
+      <div>"I'm going to fail."</div>
+      <div>"I'm <em>having the thought</em> that I'm going to fail."</div>
+      <div>"I <em>notice</em> I'm having the thought that I'm going to fail."</div>
+    </div>
+    <p class="prose">Same thought. But now there's a gap between you and it. In that gap, you get to choose.</p>
+  </section>
+
+  <section class="section">
+    <h2>If it comes back</h2>
+    <div class="cards">
+      <div class="card"><h3>That's normal</h3><p>Thoughts return. That's not failing. Every return is another chance to practice watching.</p></div>
+      <div class="card"><h3>Picture clouds</h3><p>You're the sky. Thoughts are clouds. Some are dark and heavy. All of them move. The sky is never harmed.</p></div>
+      <div class="card"><h3>Body first, again</h3><p>If a thought keeps hooking you, go back to Step 1. Breathe less, stretch, shake. A calmer body makes fewer storm forecasts.</p></div>
+    </div>
+  </section>
+
+  <a class="next t-moment" href="moment.html">
+    <div><div class="label">Next · Step 3</div><div class="title">Arrive right here</div></div>
+    <span class="arrow">→</span>
+  </a>
+
+  <footer class="foot"><p>This is coaching, not medical treatment. For panic disorder or trauma, work alongside a therapist.</p></footer>
+</main>
+</body>
+</html>

@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Settle the Body · Breathe, My Friend</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=Atkinson+Hyperlegible:wght@400;700&display=swap">
+<link rel="stylesheet" href="styles.css">
+<style>
+  .week { display: grid; grid-template-columns: 110px repeat(7, minmax(0, 1fr)); gap: 6px; font-size: 0.85rem; min-width: 520px; }
+  .week .h { font-weight: 700; color: var(--muted); text-align: center; }
+  .week .row { font-weight: 700; display: flex; align-items: center; }
+  .week .dot { height: 30px; border-radius: 8px; background: var(--bg); }
+  .week .on { background: var(--c); }
+  .week-wrap { overflow-x: auto; }
+  .jump { display: flex; gap: 8px; flex-wrap: wrap; }
+  .jump a { text-decoration: none; font-weight: 700; padding: 8px 14px; border-radius: 999px; background: var(--soft); }
+  .practice { display: flex; flex-direction: column; gap: 20px; scroll-margin-top: 80px; }
+  .practice-head { display: flex; gap: 16px; align-items: center; }
+  .practice-head svg { width: 56px; height: 56px; flex: none; }
+  .practice-head h2 { font-size: clamp(1.6rem, 4.5vw, 2.2rem); }
+  .bolt { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; }
+  .bolt div { border-radius: 10px; padding: 12px; text-align: center; background: var(--bg); }
+  .bolt strong { display: block; font-family: var(--display); font-size: 1.4rem; color: var(--c); font-variant-numeric: tabular-nums; }
+  .bolt span { font-size: 0.85rem; color: var(--muted); }
+</style>
+</head>
+<body class="t-body">
+
+<nav class="nav"><div class="nav-inner">
+  <a class="brand" href="index.html">Breathe, <span>my friend</span></a>
+  <ul class="nav-links">
+    <li class="t-body"><a href="index.html">Home</a></li>
+    <li class="t-body"><a href="body.html" aria-current="page">1 · Body</a></li>
+    <li class="t-mind"><a href="mind.html">2 · Mind</a></li>
+    <li class="t-moment"><a href="moment.html">3 · Moment</a></li>
+    <li class="t-science"><a href="science.html">The Science</a></li>
+  </ul>
+</div></nav>
+
+<main class="wrap">
+
+  <header class="page-head">
+    <span class="eyebrow">Step 1 · Body</span>
+    <h1>Settle the body</h1>
+    <p class="lede">You can't think your way out of a body that's in alarm. So we start with the body.</p>
+  </header>
+
+  <section class="section">
+    <div class="oneline">
+      <span class="label">In one line</span>
+      <p>Your nervous system listens to your body more than your thoughts. Loosen it, shake it, breathe it slower, and the alarm turns down.</p>
+    </div>
+    <div class="pair">
+      <div class="old"><span class="label">The usual approach</span><p>"Just think positive." "Calm down." Trying to talk a panicking body out of panicking.</p></div>
+      <div class="new"><span class="label">This approach</span><p>Give the body a new experience first. Once it feels safer, the mind follows on its own.</p></div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-head">
+      <h2>Your week</h2>
+      <p class="muted">Three practices. Small, steady doses beat big, rare ones.</p>
+    </div>
+    <div class="figure week-wrap">
+      <div class="week" role="table" aria-label="Weekly practice schedule">
+        <div></div><div class="h">Mon</div><div class="h">Tue</div><div class="h">Wed</div><div class="h">Thu</div><div class="h">Fri</div><div class="h">Sat</div><div class="h">Sun</div>
+        <div class="row">Stretch</div><div class="dot on"></div><div class="dot on"></div><div class="dot on"></div><div class="dot on"></div><div class="dot on"></div><div class="dot on"></div><div class="dot on"></div>
+        <div class="row">Breathe</div><div class="dot on"></div><div class="dot on"></div><div class="dot on"></div><div class="dot on"></div><div class="dot on"></div><div class="dot on"></div><div class="dot on"></div>
+        <div class="row">Shake</div><div class="dot"></div><div class="dot on"></div><div class="dot"></div><div class="dot"></div><div class="dot on"></div><div class="dot"></div><div class="dot"></div>
+      </div>
+    </div>
+    <nav class="jump" aria-label="Jump to a practice">
+      <a href="#stretch">Stretch: fascia</a>
+      <a href="#shake">Shake: TRE</a>
+      <a href="#breathe">Breathe: Buteyko</a>
+    </nav>
+  </section>
+
+  <!-- FASCIA -->
+  <section class="practice" id="stretch">
+    <div class="practice-head">
+      <svg viewBox="0 0 44 44" aria-hidden="true"><g fill="none" stroke="var(--body)" stroke-width="2" stroke-linecap="round"><path d="M4 10 Q22 18 40 10"/><path d="M4 22 Q22 30 40 22"/><path d="M4 34 Q22 42 40 34"/><path d="M12 6 L16 40"/><path d="M28 6 L32 40"/></g></svg>
+      <div><span class="tag">Daily</span><h2>Stretch the web</h2></div>
+    </div>
+    <p class="prose">Under your skin is <strong>fascia</strong>: a thin, stretchy web that wraps every muscle, bone and organ. Think of the white film on a chicken breast. It's all one connected sheet, head to toe.</p>
+    <div class="cards">
+      <div class="card"><h3>Why it matters</h3><p>Fascia is packed with sensing nerves. It's one of the ways your brain "reads" how safe your body is. When it's tight and stuck, the brain reads tension, and tension feels like danger.</p></div>
+      <div class="card"><h3>What stress does</h3><p>Stress makes you brace: shoulders up, jaw tight, belly held. Do that for years and fascia stiffens around the brace. The body stays braced even when life is calm.</p></div>
+      <div class="card"><h3>What stretching does</h3><p>Slow, whole-body movement unsticks the web. Many people feel warmth, tingling, or a wave of release. Energy that felt stuck starts to move again.</p></div>
+    </div>
+    <div class="sub">How to do it</div>
+    <ol class="howto">
+      <li><div>Follow a short daily routine from <a href="https://humangarage.net" target="_blank" rel="noopener">Human Garage</a>. A few minutes is enough to start.</div></li>
+      <li><div>Move slowly. Fascia responds to gentle, sustained stretch, not force.</div></li>
+      <li><div>Notice what you feel during and after. That noticing is half the practice.</div></li>
+    </ol>
+  </section>
+
+  <!-- TRE -->
+  <section class="practice" id="shake">
+    <div class="practice-head">
+      <svg viewBox="0 0 44 44" aria-hidden="true"><g fill="none" stroke="var(--body)" stroke-width="2" stroke-linecap="round"><path d="M10 6 q-4 4 0 8 t0 8 t0 8 t0 8"/><path d="M22 6 q-4 4 0 8 t0 8 t0 8 t0 8"/><path d="M34 6 q-4 4 0 8 t0 8 t0 8 t0 8"/></g></svg>
+      <div><span class="tag">2× a week</span><h2>Shake it off</h2></div>
+    </div>
+    <p class="prose">Watch a dog after a scare or a fight. It shakes its whole body, then trots off like nothing happened. Many mammals do this. It looks like a reset button for stress.</p>
+    <p class="prose">Humans have the same ability, but we learned to hold still and "keep it together." <strong>TRE</strong> (Tension and Trauma Releasing Exercises, created by David Berceli) helps you switch that natural shaking back on.</p>
+    <div class="cards">
+      <div class="card"><h3>What it feels like</h3><p>A gentle, automatic trembling, usually starting in the legs. You're not making it happen. You're letting it happen.</p></div>
+      <div class="card"><h3>Why it helps</h3><p>The shaking seems to burn off leftover stress charge, the energy your body got ready to fight or run with but never used.</p></div>
+      <div class="card"><h3>How long</h3><p>About 10 to 15 minutes of shaking, twice a week. More is not better here.</p></div>
+    </div>
+    <div class="sub">How to do it</div>
+    <ol class="howto">
+      <li><div>Do a few simple exercises that tire the legs a little (a TRE guide or provider will show you the set).</div></li>
+      <li><div>Lie on your back, soles of the feet together, knees falling open. Then slowly raise the knees a few inches.</div></li>
+      <li><div>Let the trembling start on its own. Breathe and watch it.</div></li>
+      <li><div><strong>To stop:</strong> stretch your legs out flat. The shaking settles. Learn this first, so you always feel in charge.</div></li>
+    </ol>
+    <div class="care">
+      <h3>Go gently</h3>
+      <ul>
+        <li>Shaking can bring up old feelings or memories. If it feels like too much, stop, sit up and rest.</li>
+        <li>Skip it during pregnancy, with a fresh injury, or with serious mental-health conditions unless a certified TRE provider is guiding you.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- BUTEYKO -->
+  <section class="practice" id="breathe">
+    <div class="practice-head">
+      <svg viewBox="0 0 44 44" aria-hidden="true"><g fill="none" stroke="var(--body)" stroke-width="2" stroke-linecap="round"><path d="M6 16 H28 a5 5 0 1 0 -5 -5"/><path d="M6 24 H36 a5 5 0 1 1 -5 5"/><path d="M6 32 H18"/></g></svg>
+      <div><span class="tag">Daily</span><h2>Breathe less, not more</h2></div>
+    </div>
+    <div class="pair">
+      <div class="old"><span class="label">The myth</span><p>CO₂ is waste. Breathe big and deep to get it out and get more oxygen in.</p></div>
+      <div class="new"><span class="label">The truth</span><p>You need CO₂. It's what helps your blood hand oxygen to your cells. Breathe too much and you can end up feeling <em>short</em> of air.</p></div>
+    </div>
+    <p class="prose">Anxious people often <strong>overbreathe</strong> without knowing it: fast, upper-chest, through the mouth, lots of sighing. That drops CO₂, and low CO₂ causes dizziness, tingling hands, a racing heart and air hunger. Those are panic symptoms. The breathing can be feeding the panic.</p>
+    <p class="prose">The <strong>Buteyko Method</strong> (from Ukrainian doctor Konstantin Buteyko) trains you to breathe lighter, slower and through the nose, so your body gets comfortable with a healthy level of CO₂.</p>
+
+    <div class="sub">Your progress number: the Control Pause</div>
+    <ol class="howto">
+      <li><div>Sit calmly. Breathe normally through your nose for a minute.</div></li>
+      <li><div>After a normal, relaxed breath <em>out</em>, pinch your nose and start counting seconds.</div></li>
+      <li><div>Stop at the <strong>first</strong> urge to breathe. Not the max. Just the first nudge.</div></li>
+      <li><div>Let go and breathe in calmly through the nose. If you need to gasp, you held too long.</div></li>
+    </ol>
+    <div class="figure">
+      <div class="bolt">
+        <div><strong>Under 20 s</strong><span>Lots of room to grow</span></div>
+        <div><strong>20–40 s</strong><span>Getting there</span></div>
+        <div><strong>40 s +</strong><span>Calm, efficient breathing</span></div>
+      </div>
+      <p class="caption">Check it once a day, at the same time. Watching the number climb over weeks is a great motivator.</p>
+    </div>
+
+    <div class="sub">The daily practice</div>
+    <ol class="howto">
+      <li><div>Keep your mouth closed. Nose breathing, day and night as much as you can.</div></li>
+      <li><div>Sit and breathe a little <em>less</em> than you want to: smaller, softer, slower breaths.</div></li>
+      <li><div>Aim for a light, mild air hunger, like you'd enjoy a slightly bigger breath. Hold that gently for a few minutes.</div></li>
+    </ol>
+    <div class="care">
+      <h3>Go gently, especially with panic</h3>
+      <ul>
+        <li>People with panic are often extra sensitive to rising CO₂. A long breath hold can trigger the very feeling you're trying to calm.</li>
+        <li>Start with very short, very easy reductions. Comfort first. Never strain.</li>
+        <li>Check with a doctor first if you're pregnant or have heart problems, high blood pressure, epilepsy or kidney disease.</li>
+      </ul>
+    </div>
+  </section>
+
+  <a class="next t-mind" href="mind.html">
+    <div><div class="label">Next · Step 2</div><div class="title">Watch your thoughts</div></div>
+    <span class="arrow">→</span>
+  </a>
+
+  <footer class="foot"><p>This is coaching, not medical treatment. For panic disorder or trauma, work alongside a therapist.</p></footer>
+</main>
+</body>
+</html>

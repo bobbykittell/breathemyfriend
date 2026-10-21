@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Breathe, My Friend</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=Atkinson+Hyperlegible:wght@400;700&display=swap">
+<link rel="stylesheet" href="styles.css">
+<style>
+  .hero { display: flex; flex-direction: column; gap: 18px; }
+  .hero h1 { font-size: clamp(2.8rem, 9vw, 5rem); font-weight: 700; letter-spacing: -0.02em; }
+  .hero h1 .from { color: var(--panic); }
+  .hero h1 .to { color: var(--body); }
+  .hero .lede { font-size: 1.25rem; color: var(--muted); max-width: 34ch; }
+  .wave { width: 100%; height: auto; display: block; }
+  .wave-labels { display: flex; justify-content: space-between; font-size: 0.8rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); font-weight: 700; }
+
+  .steps { display: flex; flex-direction: column; }
+  .step { display: grid; grid-template-columns: 56px 1fr; gap: 20px; align-items: start; }
+  .num {
+    width: 56px; height: 56px; border-radius: 50%; display: grid; place-items: center;
+    font-family: var(--display); font-weight: 700; font-size: 1.6rem; color: var(--bg); background: var(--c);
+  }
+  .step-body { min-width: 0; display: flex; flex-direction: column; gap: 14px; padding-top: 6px; }
+  .step h2 { font-size: clamp(1.7rem, 4.5vw, 2.3rem); }
+  .step .say { color: var(--muted); max-width: 52ch; }
+  .connector { width: 2px; height: 36px; background: var(--line); margin: 8px 0 8px 27px; }
+
+  .mini { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; }
+  .mini .card svg { width: 44px; height: 44px; }
+
+  .flow { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+  .flow .pill { background: var(--soft); color: var(--c); font-weight: 700; padding: 10px 16px; border-radius: 999px; }
+  .flow .arrow { color: var(--muted); font-size: 1.2rem; }
+  .panel { background: var(--soft); border-radius: 14px; padding: 18px 20px; display: flex; gap: 16px; align-items: center; }
+  .panel svg { flex: none; width: 56px; height: 56px; }
+  .panel p { min-width: 0; }
+  .more { font-weight: 700; text-decoration: none; align-self: flex-start; }
+  .more:hover { text-decoration: underline; }
+
+  .rule h2 { font-size: clamp(1.5rem, 4.5vw, 2.1rem); }
+  .rule h2 span:nth-child(1) { color: var(--body); }
+  .rule h2 span:nth-child(2) { color: var(--mind); }
+  .rule h2 span:nth-child(3) { color: var(--moment); }
+
+  @media (max-width: 680px) {
+    .mini { grid-template-columns: 1fr; }
+    .step { grid-template-columns: 44px 1fr; gap: 14px; }
+    .num { width: 44px; height: 44px; font-size: 1.3rem; }
+    .connector { margin-left: 21px; }
+  }
+  @media (prefers-reduced-motion: no-preference) {
+    .calm { stroke-dasharray: 1400; animation: draw 2.4s ease-out both; }
+    @keyframes draw { from { stroke-dashoffset: 1400; } to { stroke-dashoffset: 0; } }
+  }
+</style>
+</head>
+<body class="t-body">
+
+<nav class="nav"><div class="nav-inner">
+  <a class="brand" href="index.html">Breathe, <span>my friend</span></a>
+  <ul class="nav-links">
+    <li class="t-body"><a href="index.html" aria-current="page">Home</a></li>
+    <li class="t-body"><a href="body.html">1 · Body</a></li>
+    <li class="t-mind"><a href="mind.html">2 · Mind</a></li>
+    <li class="t-moment"><a href="moment.html">3 · Moment</a></li>
+    <li class="t-science"><a href="science.html">The Science</a></li>
+  </ul>
+</div></nav>
+
+<main class="wrap">
+
+  <header class="hero">
+    <span class="eyebrow">From panic to peace</span>
+    <h1>Breathe, <span class="to">my friend.</span></h1>
+    <p class="lede">Calm the body first. Then the mind. Then just be here.</p>
+    <svg class="wave" viewBox="0 0 800 120" role="img" aria-label="A jagged, jittery line that slowly smooths into a calm wave">
+      <path id="jitter" fill="none" stroke="var(--panic)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path>
+      <path id="calm" class="calm" fill="none" stroke="var(--body)" stroke-width="3" stroke-linecap="round"></path>
+    </svg>
+    <div class="wave-labels"><span>Jittery</span><span>Calm and present</span></div>
+  </header>
+
+  <section class="steps">
+
+    <div class="step t-body">
+      <div class="num">1</div>
+      <div class="step-body">
+        <span class="eyebrow">Body</span>
+        <h2>Settle the body</h2>
+        <p class="say">A scared body can't hear calm thoughts. Start here.</p>
+        <div class="mini">
+          <div class="card">
+            <svg viewBox="0 0 44 44" aria-hidden="true"><g fill="none" stroke="var(--body)" stroke-width="2" stroke-linecap="round"><path d="M4 10 Q22 18 40 10"/><path d="M4 22 Q22 30 40 22"/><path d="M4 34 Q22 42 40 34"/><path d="M12 6 L16 40"/><path d="M28 6 L32 40"/></g></svg>
+            <h3>Stretch</h3>
+            <span class="tag">Daily</span>
+            <p>Your body is wrapped in a web called fascia. Loosen it so stuck tension can let go.</p>
+          </div>
+          <div class="card">
+            <svg viewBox="0 0 44 44" aria-hidden="true"><g fill="none" stroke="var(--body)" stroke-width="2" stroke-linecap="round"><path d="M10 6 q-4 4 0 8 t0 8 t0 8 t0 8"/><path d="M22 6 q-4 4 0 8 t0 8 t0 8 t0 8"/><path d="M34 6 q-4 4 0 8 t0 8 t0 8 t0 8"/></g></svg>
+            <h3>Shake</h3>
+            <span class="tag">2× a week</span>
+            <p>Animals shake after a scare, then move on. Your body knows how to do this too.</p>
+          </div>
+          <div class="card">
+            <svg viewBox="0 0 44 44" aria-hidden="true"><g fill="none" stroke="var(--body)" stroke-width="2" stroke-linecap="round"><path d="M6 16 H28 a5 5 0 1 0 -5 -5"/><path d="M6 24 H36 a5 5 0 1 1 -5 5"/><path d="M6 32 H18"/></g></svg>
+            <h3>Breathe less</h3>
+            <span class="tag">Daily</span>
+            <p>Slow, quiet nose breathing. CO₂ isn't waste. Keeping a little more of it calms you.</p>
+          </div>
+        </div>
+        <a class="more" href="body.html">Go deeper into the body →</a>
+      </div>
+    </div>
+
+    <div class="connector" aria-hidden="true"></div>
+
+    <div class="step t-mind">
+      <div class="num">2</div>
+      <div class="step-body">
+        <span class="eyebrow">Mind</span>
+        <h2>Watch your thoughts</h2>
+        <p class="say">A thought is your brain's guess. Sometimes right, often wrong. You don't have to believe it.</p>
+        <div class="flow" aria-label="Notice, then honor, then let it pass">
+          <span class="pill">Notice it</span><span class="arrow">→</span>
+          <span class="pill">Honor it</span><span class="arrow">→</span>
+          <span class="pill">Let it pass</span>
+        </div>
+        <div class="panel">
+          <svg viewBox="0 0 56 56" aria-hidden="true"><path d="M14 38 a9 9 0 0 1 2 -17.8 a12 12 0 0 1 23 3 a7.5 7.5 0 0 1 2 14.8 Z" fill="var(--surface)" stroke="var(--mind)" stroke-width="2" stroke-linejoin="round"/><path d="M10 46 h14 M30 46 h16" stroke="var(--mind)" stroke-width="2" stroke-linecap="round" opacity=".5"/></svg>
+          <p>Most feelings pass in about <strong>90 seconds</strong> if you don't feed them. If one comes back, that's fine. Watch it again.</p>
+        </div>
+        <a class="more" href="mind.html">Go deeper into the mind →</a>
+      </div>
+    </div>
+
+    <div class="connector" aria-hidden="true"></div>
+
+    <div class="step t-moment">
+      <div class="num">3</div>
+      <div class="step-body">
+        <span class="eyebrow">Moment</span>
+        <h2>Arrive right here</h2>
+        <p class="say">Stop chasing a better moment later. Thank this one, just as it is.</p>
+        <div class="panel">
+          <svg viewBox="0 0 56 56" aria-hidden="true"><circle cx="28" cy="28" r="9" fill="var(--moment)"/><g stroke="var(--moment)" stroke-width="2.5" stroke-linecap="round"><path d="M28 6v7M28 43v7M6 28h7M43 28h7M12.4 12.4l5 5M38.6 38.6l5 5M12.4 43.6l5-5M38.6 17.4l5-5"/></g></svg>
+          <p>The buzz of being alive shows up on its own when you stop demanding it. A dull moment counts too.</p>
+        </div>
+        <a class="more" href="moment.html">Go deeper into the moment →</a>
+      </div>
+    </div>
+
+  </section>
+
+  <section class="section rule">
+    <h2><span>Body first.</span> <span>Then mind.</span> <span>Then the moment.</span></h2>
+    <p class="prose muted">Why this order? When your body is in alarm, the thinking brain goes partly offline. Settle the body and the mind can finally listen. A quiet mind is what lets you actually be here.</p>
+  </section>
+
+  <a class="next t-science" href="science.html">
+    <div><div class="label">Curious why it works?</div><div class="title">The science, made simple</div></div>
+    <span class="arrow">→</span>
+  </a>
+
+  <footer class="foot">
+    <p>Go gently. This is coaching, not medical treatment. For panic disorder or trauma, work alongside a therapist.</p>
+  </footer>
+</main>
+
+<script>
+(function () {
+  // Left half: jagged, uneven spikes. Right half: one smooth, slow wave.
+  var mid = 60, jit = "M0 " + mid, x = 0, seed = 7;
+  function rnd() { seed = (seed * 9301 + 49297) % 233280; return seed / 233280; }
+  while (x < 400) {
+    x += 8 + rnd() * 10;
+    var amp = 46 * (1 - x / 460);
+    jit += " L" + x.toFixed(1) + " " + (mid + (rnd() > 0.5 ? -1 : 1) * amp * (0.4 + rnd() * 0.6)).toFixed(1);
+  }
+  var endX = x;
+  jit += " L" + endX.toFixed(1) + " " + mid;
+  var calm = "M" + endX.toFixed(1) + " " + mid;
+  for (var cx = endX; cx <= 800; cx += 4) {
+    var y = mid + 18 * Math.sin((cx - endX) / 60) * Math.min(1, (cx - endX) / 80);
+    calm += " L" + cx.toFixed(1) + " " + y.toFixed(1);
+  }
+  document.getElementById("jitter").setAttribute("d", jit);
+  document.getElementById("calm").setAttribute("d", calm);
+})();
+</script>
+</body>
+</html>

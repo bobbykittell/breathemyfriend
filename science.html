@@ -1,0 +1,248 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Science · Breathe, My Friend</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=Atkinson+Hyperlegible:wght@400;700&display=swap">
+<link rel="stylesheet" href="styles.css">
+<style>
+  .toc { list-style: none; padding: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 8px; }
+  .toc a { display: flex; gap: 10px; align-items: baseline; text-decoration: none; color: var(--ink); background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 10px 14px; font-weight: 700; }
+  .toc a span { color: var(--c); font-family: var(--display); }
+  .toc a:hover { border-color: var(--c); }
+  .idea { display: flex; flex-direction: column; gap: 16px; scroll-margin-top: 80px; padding-top: 8px; }
+  .idea-head { display: flex; flex-direction: column; gap: 6px; }
+  .idea-head h2 { font-size: clamp(1.6rem, 4.5vw, 2.1rem); }
+  .who { font-size: 0.9rem; color: var(--muted); }
+  .why { border-left: 3px solid var(--c); padding: 4px 0 4px 16px; }
+  .why .label { display: block; font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase; font-weight: 700; color: var(--c); margin-bottom: 2px; }
+  .states { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; }
+  .states > div { border-radius: 14px; padding: 16px; display: flex; flex-direction: column; gap: 6px; min-width: 0; }
+  .states .s-safe { background: var(--body-soft); }
+  .states .s-safe h3 { color: var(--body); }
+  .states .s-fight { background: var(--panic-soft); }
+  .states .s-fight h3 { color: var(--panic); }
+  .states .s-shut { background: var(--mind-soft); }
+  .states .s-shut h3 { color: var(--mind); }
+  .states .feel { font-size: 0.9rem; color: var(--muted); }
+  .note { font-size: 0.92rem; background: var(--surface); border: 1px dashed var(--line); border-radius: 12px; padding: 12px 16px; color: var(--muted); }
+  .note strong { color: var(--ink); }
+  .seq { display: flex; align-items: stretch; gap: 10px; flex-wrap: wrap; }
+  .seq > div { flex: 1 1 160px; background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 16px; display: flex; flex-direction: column; gap: 4px; min-width: 0; }
+  .seq .k { font-family: var(--display); font-weight: 700; font-size: 1.3rem; }
+  .seq > div:nth-child(1) .k { color: var(--body); }
+  .seq > div:nth-child(2) .k { color: var(--science); }
+  .seq > div:nth-child(3) .k { color: var(--mind); }
+  .maptable { width: 100%; border-collapse: collapse; font-size: 0.97rem; min-width: 560px; }
+  .maptable th, .maptable td { text-align: left; padding: 12px 14px; border-bottom: 1px solid var(--line); vertical-align: top; }
+  .maptable th { font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); }
+  .maptable td:first-child { font-weight: 700; white-space: nowrap; }
+  .maptable tr.r1 td:first-child { color: var(--body); }
+  .maptable tr.r2 td:first-child { color: var(--mind); }
+  .maptable tr.r3 td:first-child { color: var(--moment); }
+  .table-wrap { overflow-x: auto; background: var(--surface); border: 1px solid var(--line); border-radius: 14px; }
+  @media (max-width: 640px) { .states { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body class="t-science">
+
+<nav class="nav"><div class="nav-inner">
+  <a class="brand" href="index.html">Breathe, <span>my friend</span></a>
+  <ul class="nav-links">
+    <li class="t-body"><a href="index.html">Home</a></li>
+    <li class="t-body"><a href="body.html">1 · Body</a></li>
+    <li class="t-mind"><a href="mind.html">2 · Mind</a></li>
+    <li class="t-moment"><a href="moment.html">3 · Moment</a></li>
+    <li class="t-science"><a href="science.html" aria-current="page">The Science</a></li>
+  </ul>
+</div></nav>
+
+<main class="wrap">
+
+  <header class="page-head">
+    <span class="eyebrow">The Science</span>
+    <h1>Why this works, made simple</h1>
+    <p class="lede">Seven big ideas from the people who study the nervous system for a living. No jargon required.</p>
+  </header>
+
+  <ul class="toc">
+    <li><a href="#gas-brake"><span>1</span> Gas and brake</a></li>
+    <li><a href="#three-states"><span>2</span> Three states</a></li>
+    <li><a href="#window"><span>3</span> Your window</a></li>
+    <li><a href="#body-budget"><span>4</span> The body budget</a></li>
+    <li><a href="#fear-of-fear"><span>5</span> Fear of fear</a></li>
+    <li><a href="#order"><span>6</span> Why body comes first</a></li>
+    <li><a href="#together"><span>7</span> Calm is contagious</a></li>
+  </ul>
+
+  <!-- 1 -->
+  <section class="idea" id="gas-brake">
+    <div class="idea-head">
+      <span class="eyebrow">Idea 1</span>
+      <h2>Your body has a gas pedal and a brake</h2>
+      <p class="who">The autonomic nervous system: the part that runs on its own</p>
+    </div>
+    <figure class="figure">
+      <svg viewBox="0 0 640 170" role="img" aria-label="Two pedals. The gas pedal speeds the body up for action. The brake, mostly the vagus nerve, slows it down to rest.">
+        <rect x="40" y="20" width="260" height="130" rx="14" fill="var(--panic-soft)"/>
+        <text x="64" y="54" font-size="20" font-weight="700" fill="var(--panic)" font-family="Bricolage Grotesque, sans-serif">Gas pedal</text>
+        <text x="64" y="78" font-size="13" fill="var(--muted)" font-family="Atkinson Hyperlegible, sans-serif">Sympathetic system</text>
+        <text x="64" y="106" font-size="15" fill="var(--ink)" font-family="Atkinson Hyperlegible, sans-serif">Heart up, breath fast,</text>
+        <text x="64" y="126" font-size="15" fill="var(--ink)" font-family="Atkinson Hyperlegible, sans-serif">muscles ready. Fight or run.</text>
+        <rect x="340" y="20" width="260" height="130" rx="14" fill="var(--body-soft)"/>
+        <text x="364" y="54" font-size="20" font-weight="700" fill="var(--body)" font-family="Bricolage Grotesque, sans-serif">Brake</text>
+        <text x="364" y="78" font-size="13" fill="var(--muted)" font-family="Atkinson Hyperlegible, sans-serif">Parasympathetic system (vagus nerve)</text>
+        <text x="364" y="106" font-size="15" fill="var(--ink)" font-family="Atkinson Hyperlegible, sans-serif">Heart down, breath slow,</text>
+        <text x="364" y="126" font-size="15" fill="var(--ink)" font-family="Atkinson Hyperlegible, sans-serif">digest, heal, connect.</text>
+      </svg>
+    </figure>
+    <p class="prose">Both pedals are healthy. You need the gas to meet a deadline or jump out of the way of a car. Trouble starts when the gas gets stuck down and the brake gets weak. That's chronic anxiety. Panic is the gas floored with no brake at all.</p>
+    <p class="prose">Scientists can measure the brake with <strong>heart rate variability (HRV)</strong>: tiny changes in the time between heartbeats. More variation usually means a stronger brake. Many smartwatches track it.</p>
+    <div class="why"><span class="label">Why it matters for you</span>Calm isn't having no gas. It's having a strong brake. Slow nose breathing and long, easy exhales are some of the most direct ways to press it.</div>
+  </section>
+
+  <!-- 2 -->
+  <section class="idea" id="three-states">
+    <div class="idea-head">
+      <span class="eyebrow">Idea 2</span>
+      <h2>Three states you move between</h2>
+      <p class="who">Polyvagal Theory, Stephen Porges · made practical by Deb Dana</p>
+    </div>
+    <div class="states">
+      <div class="s-safe"><h3>Safe and connected</h3><p>Calm, curious, present. You can think clearly and enjoy people.</p><p class="feel">Feels like: ease, warmth, "I'm okay."</p></div>
+      <div class="s-fight"><h3>Fight or flight</h3><p>Revved up and on guard. Ready for danger.</p><p class="feel">Feels like: anxious, irritated, racing, panicky.</p></div>
+      <div class="s-shut"><h3>Shut down</h3><p>When it's all too much, the body pulls the plug to protect you.</p><p class="feel">Feels like: numb, foggy, flat, "what's the point."</p></div>
+    </div>
+    <p class="prose">Your body is always scanning for safety or danger, below conscious thought. Porges called this <strong>neuroception</strong>. It's why you can feel uneasy in a room before you know why.</p>
+    <p class="note"><strong>Good to know:</strong> many scientists question the biology behind this theory, especially its claims about evolution and the vagus nerve. As a <em>map</em> of how states feel and shift, it's widely used and very helpful. Use it as a map, not as proven fact.</p>
+    <div class="why"><span class="label">Why it matters for you</span>You're not broken when you feel anxious or numb. You're in a state. States change, and you can learn to move between them.</div>
+  </section>
+
+  <!-- 3 -->
+  <section class="idea" id="window">
+    <div class="idea-head">
+      <span class="eyebrow">Idea 3</span>
+      <h2>Your window of tolerance</h2>
+      <p class="who">Dr. Dan Siegel, psychiatrist</p>
+    </div>
+    <figure class="figure">
+      <svg viewBox="0 0 640 230" role="img" aria-label="A wavy line moving through a middle band called the window of tolerance. Above it is too much: panic and overwhelm. Below it is too little: numb and shut down.">
+        <rect x="20" y="10" width="600" height="60" fill="var(--panic-soft)" rx="10"/>
+        <rect x="20" y="80" width="600" height="70" fill="var(--body-soft)" rx="10"/>
+        <rect x="20" y="160" width="600" height="60" fill="var(--mind-soft)" rx="10"/>
+        <text x="36" y="36" font-size="15" font-weight="700" fill="var(--panic)" font-family="Bricolage Grotesque, sans-serif">Too much</text>
+        <text x="36" y="56" font-size="13" fill="var(--muted)" font-family="Atkinson Hyperlegible, sans-serif">panic, rage, overwhelm</text>
+        <text x="36" y="110" font-size="15" font-weight="700" fill="var(--body)" font-family="Bricolage Grotesque, sans-serif">Your window</text>
+        <text x="36" y="130" font-size="13" fill="var(--muted)" font-family="Atkinson Hyperlegible, sans-serif">you can think, feel and cope</text>
+        <text x="36" y="186" font-size="15" font-weight="700" fill="var(--mind)" font-family="Bricolage Grotesque, sans-serif">Too little</text>
+        <text x="36" y="206" font-size="13" fill="var(--muted)" font-family="Atkinson Hyperlegible, sans-serif">numb, foggy, shut down</text>
+        <path d="M230 115 C 260 85, 280 140, 310 110 C 340 80, 350 30, 380 40 C 410 50, 400 120, 430 125 C 460 130, 470 180, 500 190 C 530 198, 540 120, 570 112 L 610 115" fill="none" stroke="var(--ink)" stroke-width="2.5" stroke-linecap="round"/>
+      </svg>
+      <figcaption>Everyone leaves their window sometimes. The goal is to notice sooner and come back faster, and over time, to make the window wider.</figcaption>
+    </figure>
+    <div class="why"><span class="label">Why it matters for you</span>You don't have to stay perfectly calm. Inside your window, stress is something you can handle. Each practice in this method widens the window a little.</div>
+  </section>
+
+  <!-- 4 -->
+  <section class="idea" id="body-budget">
+    <div class="idea-head">
+      <span class="eyebrow">Idea 4</span>
+      <h2>Your brain runs a body budget</h2>
+      <p class="who">Dr. Lisa Feldman Barrett, neuroscientist</p>
+    </div>
+    <p class="prose">Your brain's most important job isn't thinking. It's keeping your body running: managing energy, water, salt, sleep. It does this like a budget, always <strong>predicting</strong> what you'll need next and spending ahead of time.</p>
+    <div class="cards">
+      <div class="card"><h3>Anxiety is a prediction</h3><p>When the brain predicts a threat, it spends energy early: racing heart, tight stomach. The feeling is the spending, even if the threat never shows up.</p></div>
+      <div class="card"><h3>Sensing your body</h3><p><strong>Interoception</strong> is your sense of what's happening inside: heartbeat, breath, hunger, tension. It's a skill, and it gets better with practice.</p></div>
+      <div class="card"><h3>Deposits matter</h3><p>Sleep, food, movement, rest and kind people are deposits. A budget in the red makes the brain predict danger more.</p></div>
+    </div>
+    <div class="why"><span class="label">Why it matters for you</span>This is the science behind Step 2. Thoughts are predictions. You can give the brain better information, and its predictions change.</div>
+  </section>
+
+  <!-- 5 -->
+  <section class="idea" id="fear-of-fear">
+    <div class="idea-head">
+      <span class="eyebrow">Idea 5</span>
+      <h2>Fear of fear</h2>
+      <p class="who">Panic research in clinical psychology (David Barlow and others)</p>
+    </div>
+    <figure class="figure">
+      <svg viewBox="0 0 640 230" role="img" aria-label="The panic loop: a body sensation leads to a scary thought, which leads to more alarm, which creates more sensations, and the loop repeats.">
+        <defs><marker id="ah" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 Z" fill="var(--muted)"/></marker></defs>
+        <rect x="230" y="12" width="180" height="50" rx="25" fill="var(--panic-soft)"/>
+        <text x="320" y="42" text-anchor="middle" font-size="15" fill="var(--ink)" font-family="Atkinson Hyperlegible, sans-serif">Heart skips a beat</text>
+        <rect x="440" y="90" width="180" height="50" rx="25" fill="var(--panic-soft)"/>
+        <text x="530" y="120" text-anchor="middle" font-size="15" fill="var(--ink)" font-family="Atkinson Hyperlegible, sans-serif">"Something's wrong!"</text>
+        <rect x="230" y="168" width="180" height="50" rx="25" fill="var(--panic-soft)"/>
+        <text x="320" y="198" text-anchor="middle" font-size="15" fill="var(--ink)" font-family="Atkinson Hyperlegible, sans-serif">Alarm goes off</text>
+        <rect x="20" y="90" width="180" height="50" rx="25" fill="var(--panic-soft)"/>
+        <text x="110" y="120" text-anchor="middle" font-size="15" fill="var(--ink)" font-family="Atkinson Hyperlegible, sans-serif">More racing, dizzy</text>
+        <path d="M410 45 Q 500 50 520 86" fill="none" stroke="var(--muted)" stroke-width="2" marker-end="url(#ah)"/>
+        <path d="M520 144 Q 500 190 414 194" fill="none" stroke="var(--muted)" stroke-width="2" marker-end="url(#ah)"/>
+        <path d="M228 194 Q 130 190 112 144" fill="none" stroke="var(--muted)" stroke-width="2" marker-end="url(#ah)"/>
+        <path d="M112 86 Q 130 48 226 40" fill="none" stroke="var(--muted)" stroke-width="2" marker-end="url(#ah)"/>
+        <text x="320" y="120" text-anchor="middle" font-size="16" font-weight="700" fill="var(--panic)" font-family="Bricolage Grotesque, sans-serif">The panic loop</text>
+      </svg>
+    </figure>
+    <p class="prose">A big part of panic isn't the danger outside. It's being afraid of the feelings <em>inside</em>: a fast heart, a tight chest, a dizzy head. The fear of the feeling creates more of the feeling.</p>
+    <p class="prose">The proven treatment is surprising. Therapists help people <strong>bring on those sensations on purpose</strong>, safely and gently, until the body learns they aren't dangerous. The loop breaks when you stop running from the feeling.</p>
+    <div class="why"><span class="label">Why it matters for you</span>Shaking, breath work and stretching all create body sensations in a safe setting. You learn, from the inside, that sensations can come and go and you're still okay. You befriend the feeling instead of fleeing it.</div>
+  </section>
+
+  <!-- 6 -->
+  <section class="idea" id="order">
+    <div class="idea-head">
+      <span class="eyebrow">Idea 6</span>
+      <h2>Why the body comes first</h2>
+      <p class="who">Dr. Bruce Perry, child psychiatrist and trauma researcher</p>
+    </div>
+    <div class="seq">
+      <div><span class="k">Regulate</span><p>Calm the body.</p></div>
+      <div><span class="k">Relate</span><p>Feel connected and safe with someone.</p></div>
+      <div><span class="k">Reason</span><p>Now you can think it through.</p></div>
+    </div>
+    <p class="prose">The brain is built from the bottom up. The survival parts sit low and react fast. The thinking parts sit on top and come online last. In alarm, the top goes partly offline. That's why "just calm down" or "think positive" rarely works in the moment.</p>
+    <div class="why"><span class="label">Why it matters for you</span>This is why the method goes Body → Mind → Moment. Talking to a panicking brain is like texting someone whose phone is off. Turn the body down first, and the message gets through.</div>
+  </section>
+
+  <!-- 7 -->
+  <section class="idea" id="together">
+    <div class="idea-head">
+      <span class="eyebrow">Idea 7</span>
+      <h2>Calm is contagious</h2>
+      <p class="who">Co-regulation, a core idea across nervous-system research</p>
+    </div>
+    <p class="prose">Nervous systems read each other. A calm voice, a relaxed face and slow breathing nearby tell your body "you're safe" faster than any words can. It's how a parent calms a crying baby, and it keeps working our whole lives.</p>
+    <div class="why"><span class="label">Why it matters for you</span>You don't have to do this alone. Practicing with a calm, steady guide helps your system learn what safe feels like, until you can find it on your own.</div>
+  </section>
+
+  <section class="section">
+    <div class="section-head">
+      <h2>How the method lines up with the science</h2>
+    </div>
+    <div class="table-wrap">
+      <table class="maptable">
+        <thead><tr><th>Step</th><th>Practice</th><th>Science it leans on</th></tr></thead>
+        <tbody>
+          <tr class="r1"><td>1 · Body</td><td>Fascia stretching</td><td>Interoception (Idea 4), widening the window (Idea 3)</td></tr>
+          <tr class="r1"><td>1 · Body</td><td>TRE shaking</td><td>Fear of fear (Idea 5), burning off a stuck gas pedal (Idea 1)</td></tr>
+          <tr class="r1"><td>1 · Body</td><td>Buteyko breathing</td><td>Strengthening the brake (Idea 1), overbreathing and panic (Idea 5)</td></tr>
+          <tr class="r2"><td>2 · Mind</td><td>Watch, honor, let pass</td><td>The predicting brain (Idea 4), body before thinking (Idea 6)</td></tr>
+          <tr class="r3"><td>3 · Moment</td><td>Gratitude and presence</td><td>Moving into the safe state (Idea 2), the map is not the territory</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <a class="next t-body" href="index.html">
+    <div><div class="label">Back to</div><div class="title">The Method</div></div>
+    <span class="arrow">→</span>
+  </a>
+
+  <footer class="foot"><p>This is coaching, not medical treatment. For panic disorder or trauma, work alongside a therapist.</p></footer>
+</main>
+</body>
+</html>
